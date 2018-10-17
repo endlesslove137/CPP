@@ -34,6 +34,13 @@ void PrintList(ListNode* List){
 	printf("\n");
 }
 
+void PrintArray(int iA[],int number){
+	for(int i=0;i<number;i++){
+		printf("%d:%d;",i,iA[i]);
+	}
+	printf("\n");
+}
+
 //从数字 x 中取出从向左数 第 i位的值 如 890 向左数第三位 为8
 char GetValueByBit(int& x,char i){
 	int iT = 1;
@@ -53,4 +60,36 @@ ListNode* CreateList(int a[], int Length){
 	}
 	return Head;
 }
+
+bool BAllUnique(string str,int iStart,int iEnd){
+	set<char> c_set;
+	pair<set<char>::iterator, bool> ret;
+	int iEnd2 = iEnd>str.length() ? str.length() : iEnd;
+	for(int i=iStart; i<iEnd2; i++){
+		ret = c_set.insert(str.at(i));
+		if (ret.second == false){
+			return false;
+		};
+	};
+	return true;
+}
+
+char Get1BitNum(int x){
+	int result = 0;
+	while(x>0){
+		++result;
+		x = x&(x-1);
+	};
+	return result;
+};
+
+char Get0BitNum(int x){
+	int result = 0;
+	while(x>0){
+		++result;
+		x = x|(x+1);
+	};
+	return result;
+};
+
 #endif
