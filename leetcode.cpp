@@ -2,7 +2,6 @@
 #include <iostream>
 #include <hash_map>
 #include <string.h>
-#include <set>
 #include "common.h"
 #include <algorithm>
 #include <deque>

@@ -214,15 +214,49 @@ void HeapSort(int A[],int Length){
 
 
 
+// char a1[5];
+// char a2[5]="zmm";
+// StrCopy(a1,a2);
+// printf("%s\n",a1);
+char* StrCopy(char* Dest,char* Src){
+	if (!(Dest && Src)) return NULL;
+	char* Result = Dest;
+	while((*Dest++ = *Src++) != '\0');
+	return Result;
+}
+
+char* StrCpy1(char* Dest, char* Src){
+	if (!(Dest && Src)) return NULL;
+	char* Result = Dest;
+	while((*Dest++ = *Src) != '\0');
+	return Result;
+}
+
+template <typename T>
+T Add(T x,T y){
+	return  x+y;
+}
+
+int (*IAdd)(int a,int b);
+
+void test(int* a, int* b){
+	*a = *b * *a;
+	a = new int(3);
+}
+
+struct STest{
+	int id;
+} s2;
+
 
 
 
 int main(){
-	int A[] = {34,45,12,35,38,34,9,1};
+	// int A[] = {34,45,12,35,38,34,9,1};
 	// int A[] = {3,2,1,0};
-	printf("Ori Arry:");
-	PrintArray(A,ArrayNum(A));
-	ALength = ArrayNum(A);
+	// printf("Ori Arry:");
+	// PrintArray(A,ArrayNum(A));
+	// ALength = ArrayNum(A);
 	// BobbleSort(A,ArrayNum(A));
 	// QuickSort(A,0,ArrayNum(A)-1);
 	// SelectSort(A,ArrayNum(A));
@@ -230,8 +264,19 @@ int main(){
 	// InsertSort(A,ArrayNum(A));
 	// ShellSort(A,ArrayNum(A));
 	// CountSort(A,ArrayNum(A));
-	HeapSort(A,ArrayNum(A));
-	printf("After Sort:");
-	PrintArray(A,ArrayNum(A));
+	// HeapSort(A,ArrayNum(A));
+	// printf("After Sort:");
+	// PrintArray(A,ArrayNum(A));
+	// enum aa{a=5,b,c} bb;
+	// bb = (enum aa)5;
+
+	// IAdd = Add;
+	// printf("%d",IAdd(3,4));
+	char c1[4] = "abc",*p;
+	p = "dcb";
+
+
 	return 0;
 }
+
+

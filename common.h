@@ -1,6 +1,7 @@
 #ifndef _common_h
 #define _common_h
 #include <vector>
+#include <set>
 
 
 using namespace std;
