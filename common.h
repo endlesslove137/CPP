@@ -16,30 +16,30 @@ struct ListNode {
 
  int MaxAge=300;
  static void TestFunc(int a){
- 	printf("TestFunc:%d", a);
+ 	cout<<"TestFunc:%d"<< a;
  };
 
 void PrintVector(vector<int>& vI){
 	for(int iS=0; iS<vI.size(); iS++){
-		printf("%d,%d; ",iS,vI.at(iS));
+		cout<<"%d,%d; "<<iS<<vI.at(iS);
 	};
-	printf("\n");
+	cout<<"\n";
 };
 
 void PrintList(ListNode* List){
 	ListNode* lT = List;
 	while(lT){
-		printf("->%d",lT->val);		
+		cout<<"->%d"<<lT->val;		
 		lT = lT->next;
 	} 
-	printf("\n");
+	cout<<"\n";
 }
 
 void PrintArray(int iA[],int number){
 	for(int i=0;i<number;i++){
-		printf("%d:%d;",i,iA[i]);
+		cout<<"%d:%d;"<<i<<iA[i];
 	}
-	printf("\n");
+	cout<<"\n";
 }
 
 //从数字 x 中取出从向左数 第 i位的值 如 890 向左数第三位 为8
@@ -56,7 +56,7 @@ ListNode* CreateList(int a[], int Length){
 	Next = Head;
 	for(int i=1;i<Length;i++){
 		Next->next = new ListNode(a[i]);
-		// printf("i:%d,Value:%d \n",i,a[i]);
+		// cout<<"i:%d,Value:%d \n"<<i<<a[i];
 		Next = Next->next;
 	}
 	return Head;

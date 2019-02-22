@@ -15,7 +15,7 @@ class Sample{
 };
 int main(){
     Sample S(5);
-    printf("%d",S.show())
+    cout<<"%d"<<S.show()
     return 0;
 }
 

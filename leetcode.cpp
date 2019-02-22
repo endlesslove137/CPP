@@ -91,7 +91,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
 // 对于，”bbbbb”，其无重复字符的最长子字符串为”b”，长度为1
 // 给定 "pwwkew" ，最长子串是 "wke" ，长度是3。请注意答案必须是一个子串，"pwke" 是 子序列  而不是子串。
 // string s("abao");
-// printf("%d\n",lengthOfLongestSubstring2(s));
+// cout<<"%d\n"<<lengthOfLongestSubstring2(s);
 // 暴力法
 int lengthOfLongestSubstring(string s) {
 	int result = 0;
@@ -126,7 +126,7 @@ int lengthOfLongestSubstring2(string s) {
 		while(i<sLen && j<sLen){
 			char c1 = s.at(j);
 			if(find(cDeque.begin(),cDeque.end(),c1) == cDeque.end()){
-				// printf("c1:%c j:%d insert \n",c1,j);
+				// cout<<"c1:%c j:%d insert \n"<<c1<<j;
 				cDeque.push_back(c1);
 				j++;
 				result = max(result, j-i);
@@ -135,7 +135,7 @@ int lengthOfLongestSubstring2(string s) {
 				if (!cDeque.empty()){
 					char c2 = cDeque.front();
 					cDeque.pop_front();
-					// printf("c1:%c Repeat Remove:%c \n", c1, c2);
+					// cout<<"c1:%c Repeat Remove:%c \n"<< c1<< c2;
 					i++;
 				}
 			}
@@ -154,7 +154,7 @@ int lengthOfLongestSubstring2(string s) {
 // nums1中位数是3 nums2中位数是 3 3=3 那么nums1 nums2的中位数为3
 // int a[] = {1,3,5},b[]={2,4,6};
 // vector<int> vA(a,a+ArrayNum(a)),vB(b,b+ArrayNum(b));
-// printf("%f\n",findMedianSortedArrays(vA,vB));
+// cout<<"%f\n"<<findMedianSortedArrays(vA<<vB);
 double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
 	vector<int> vTemp;
 	int i1=nums1.size(),i2=nums2.size(),iMid=0,i=-1;
@@ -259,17 +259,17 @@ string convert(string s, int numRows) {
 	while(i<sLen){
 		for(j=0; i<sLen && j<numRows; j++) {
 			pS[j] += s[i++];
-			// printf("pS[%d]:%s--s[%d]:%c;", j, pS[j].c_str(), i-1, s[i-1]);
+			// cout<<"pS[%d]:%s--s[%d]:%c;"<< j<< pS[j].c_str()<< i-1<< s[i-1];
 		}
 		for(j=ij; i<sLen && j>0; j--) {
 			pS[j] += s[i++];
-			// printf("pS[%d]:%s--s[%d]:%c;", j, pS[j].c_str(), i-1, s[i-1]);
+			// cout<<"pS[%d]:%s--s[%d]:%c;"<< j<< pS[j].c_str()<< i-1<< s[i-1];
 		}
 	}
 	string result="";
 	for(i=0;i<numRows;i++){
 		result += pS[i];
-		// printf("result:%s;pS[%d]:%s",result.c_str(), i, pS[i].c_str());
+		// cout<<"result:%s;pS[%d]:%s"<<result.c_str()<< i<< pS[i].c_str();
 	}
 	delete[] pS;
 	return result;
@@ -330,7 +330,7 @@ int myAtoi(string str) {
 
 int main()   
 {   
-	printf("%d\n",reverse(-987654321));
+	cout<<"%d\n"<<reverse(-987654321);
 	return 0;
 };
 

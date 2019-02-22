@@ -96,7 +96,7 @@ void InsertSort(int A[],int Length){
 }
 
 void MergeArray(int A[],int Start,int Mid,int End,int B[]){
-	// printf("Start=%d,Mid=%d,End=%d",Start,Mid,End);
+	// cout<<"Start=%d,Mid=%d,End=%d"<<Start<<Mid<<End;
 	int iS1 = Start;
 	int iE1 = Mid;
 	int iS2 = Mid + 1;	
@@ -134,7 +134,7 @@ void MergeSort(int A[],int Length){
 void ShellSort(int A[],int Length){
 	int iGap = Length>>1;
 	while(iGap){
-		printf("iGap:%d\n",iGap);
+		cout<<"iGap:%d\n"<<iGap;
 		for(int i=iGap;i<Length;i+=iGap){
 			int Perindex = i - iGap;
 			int key = A[i];
@@ -157,7 +157,7 @@ void CountSort(int A[],int Length){
 	memset(aTemp,-1,tSize);
 	for(int i=0;i<Length;i++){
 		int iT = A[i];
-		printf("iT:%d aTemp:%d\n",iT,aTemp);
+		cout<<"iT:%d aTemp:%d\n"<<iT<<aTemp;
 		if (iT > iLength){
 			int nSize = (iT+1)*sizeof(int);
 			int* p1 = (int*)realloc(aTemp,nSize);
@@ -188,7 +188,7 @@ void RePaireNode(int A[],int Index,int MaxIndex){
 	int Max = Index;
 	if(Left<=MaxIndex && A[Left]>A[Max]) Max=Left;
 	if(Right<=MaxIndex && A[Right]>A[Max]) Max=Right;
-	printf("RePaireNode Index:%d,MaxIndex=%d",Index,MaxIndex);
+	cout<<"RePaireNode Index:%d,MaxIndex=%d"<<Index<<MaxIndex;
 	PrintArray(A,MaxIndex+1);
 	// SwapIValue(A,Index,Max);
 	SwapByType<int>(A,Index,Max);
@@ -196,7 +196,7 @@ void RePaireNode(int A[],int Index,int MaxIndex){
 
 void BuildHeap(int A[],int Length){
 	int LTNode = (Length>>1)-1;
-	printf("BuildHeap LTNode:%d\n",LTNode);
+	cout<<"BuildHeap LTNode:%d\n"<<LTNode;
 	while(LTNode>=0){
 		RePaireNode(A,LTNode--,Length-1);
 	};
@@ -217,7 +217,7 @@ void HeapSort(int A[],int Length){
 // char a1[5];
 // char a2[5]="zmm";
 // StrCopy(a1,a2);
-// printf("%s\n",a1);
+// cout<<"%s\n"<<a1;
 char* StrCopy(char* Dest,char* Src){
 	if (!(Dest && Src)) return NULL;
 	char* Result = Dest;
@@ -254,7 +254,7 @@ struct STest{
 int main(){
 	// int A[] = {34,45,12,35,38,34,9,1};
 	// int A[] = {3,2,1,0};
-	// printf("Ori Arry:");
+	// cout<<"Ori Arry:";
 	// PrintArray(A,ArrayNum(A));
 	// ALength = ArrayNum(A);
 	// BobbleSort(A,ArrayNum(A));
@@ -265,13 +265,13 @@ int main(){
 	// ShellSort(A,ArrayNum(A));
 	// CountSort(A,ArrayNum(A));
 	// HeapSort(A,ArrayNum(A));
-	// printf("After Sort:");
+	// cout<<"After Sort:";
 	// PrintArray(A,ArrayNum(A));
 	// enum aa{a=5,b,c} bb;
 	// bb = (enum aa)5;
 
 	// IAdd = Add;
-	// printf("%d",IAdd(3,4));
+	// cout<<"%d"<<IAdd(3<<4);
 	char c1[4] = "abc",*p;
 	p = "dcb";
 

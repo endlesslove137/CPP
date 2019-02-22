@@ -37,7 +37,7 @@ void Qsort(int a[], int iLow, int iHigh){
 }
 
 void BobbleSort(int a[],int Sum){
-	// printf("BobbleSort Sum=%d\n",Sum);
+	// cout<<"BobbleSort Sum=%d\n"<<Sum;
 	for(int i=0;i < Sum; i++){
 		for(int y=0; y<Sum-i-1; y++){
 			if (a[y] > a[y+1]){
@@ -130,12 +130,12 @@ bool MergeSort(int a[],int Length){
 }
 
 void QuickSort(int a[],int iStart,int iEnd){
-	// printf("Start iStart:%d,iEnd:%d\n",iStart,iEnd);
+	// cout<<"Start iStart:%d,iEnd:%d\n"<<iStart<<iEnd;
 	if (iEnd <= iStart) return;
 	int key = a[iStart];
 	int iS = iStart;
 	int iE = iEnd;
-	printf("Start key:%d,iS:%d,iE:%d\n",key,iS,iE);
+	cout<<"Start key:%d,iS:%d,iE:%d\n"<<key<<iS<<iE;
 	while (iS < iE){
 		while(iE > iS && a[iE]>key)
 			--iE;
@@ -145,7 +145,7 @@ void QuickSort(int a[],int iStart,int iEnd){
 		a[iE] = a[iS];
 	}
 	a[iS] = key;
-	// printf("End key:%d,iS:%d,iE:%d\n",key,iS,iE);
+	// cout<<"End key:%d,iS:%d,iE:%d\n"<<key<<iS<<iE;
 	QuickSort(a, iStart, iS-1);
 	QuickSort(a, iS+1, iEnd);
 }
@@ -289,7 +289,7 @@ int BinSearch(int a[],int iLength,int Value){
 	while(iLow <= iHigh){
 		iCount++;
 		iMid = (iLow + iHigh)>>1;
-		printf("iMid=%d,iCount:%d,iLow:%d,iHigh:%d\n",iMid,iCount,iLow,iHigh);
+		cout<<"iMid=%d,iCount:%d,iLow:%d,iHigh:%d\n"<<iMid<<iCount<<iLow<<iHigh;
 		Sleep(1000);
 		if (a[iMid] == Value)
 			return iMid;
@@ -331,6 +331,6 @@ int main(void){
     // FreeList(PBucketNode);
     PrintArray(b,ArrNum(b));
     int iTemp = 100;
-    printf("BinSearch Value:%d,Index:%d",iTemp,BinSearch(b,ArrNum(b),iTemp));
+    // cout<<iTemp<< BinSearch(b<<ArrNum(b)<<iTemp);
     return 0;
 }

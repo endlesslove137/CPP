@@ -24,7 +24,7 @@ class sub:private base{
 		};
 		~sub(){};
 		void test(int a){
-			printf("%d",a);
+			cout<<a;
 		};
 };
 
@@ -38,9 +38,9 @@ int main()
 {   	
 	sub* sub1 = new sub(2);
 	// sub1->a=2;
-	// printf("%d\n",sub1->getn());
+	// cout<<"%d\n"<<sub1->getn();
 	delete sub1;
-	// printf("%d\n",sub1->getn());
+	// cout<<"%d\n"<<sub1->getn();
 	return 0;
 };
 

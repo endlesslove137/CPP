@@ -8,13 +8,13 @@ using namespace std;
 
 
 void test(const int& v1,const int& v2){
-	printf("%d,%d\n", v1,v2);
+	cout<<"%d,%d\n"<< v1<<v2;
 };
 
 class cTest{
 	public:
 		void echo(){ 
-			printf("*ip:%d\n",*ip);
+			cout<<"*ip:%d\n"<<*ip;
 			c = 3;
 		};
 		int* ip;
@@ -24,7 +24,7 @@ class cTest{
 			delete ip;
 			ip = NULL;
 		};
-		static void test2() { printf("test2\n");};
+		static void test2() { cout<<"test2\n";};
 		static int c;
 };
 
@@ -46,7 +46,7 @@ int a;
 
 char* GetMemory(void){
 	char p[] = "helloworld";
-	printf("%d\n",p);
+	cout<<"%d\n"<<p;
 	return p;
 }
 
