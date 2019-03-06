@@ -14,6 +14,13 @@ struct ListNode {
       ListNode(int x) : val(x), next(NULL) {}
 };
 
+struct TreeNode{
+	int val;
+	TreeNode* Left;
+	TreeNode* Right;
+	TreeNode(int x):val(x),Left(NULL),Right(NULL){}
+};
+
  int MaxAge=300;
  static void TestFunc(int a){
  	cout<<"TestFunc:%d"<< a;
@@ -21,7 +28,7 @@ struct ListNode {
 
 void PrintVector(vector<int>& vI){
 	for(int iS=0; iS<vI.size(); iS++){
-		cout<<"%d,%d; "<<iS<<vI.at(iS);
+		cout <<iS <<":"<< vI.at(iS) << endl;
 	};
 	cout<<"\n";
 };
@@ -37,7 +44,7 @@ void PrintList(ListNode* List){
 
 void PrintArray(int iA[],int number){
 	for(int i=0;i<number;i++){
-		cout<<"%d:%d;"<<i<<iA[i];
+		cout <<i <<":"<< iA[i] << endl;
 	}
 	cout<<"\n";
 }

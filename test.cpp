@@ -252,13 +252,13 @@ struct STest{
 
 
 int main(){
-	// int A[] = {34,45,12,35,38,34,9,1};
+	int A[] = {34,45,12,35,38,34,9,1};
 	// int A[] = {3,2,1,0};
 	// cout<<"Ori Arry:";
 	// PrintArray(A,ArrayNum(A));
 	// ALength = ArrayNum(A);
 	// BobbleSort(A,ArrayNum(A));
-	// QuickSort(A,0,ArrayNum(A)-1);
+	QuickSort(A,0,ArrayNum(A)-1);
 	// SelectSort(A,ArrayNum(A));
 	// MergeSort(A,ArrayNum(A));
 	// InsertSort(A,ArrayNum(A));
@@ -272,9 +272,10 @@ int main(){
 
 	// IAdd = Add;
 	// cout<<"%d"<<IAdd(3<<4);
-	char c1[4] = "abc",*p;
-	p = "dcb";
+	// char c1[4] = "abc",*p;
+	// p = "dcb";
 
+	
 
 	return 0;
 }
